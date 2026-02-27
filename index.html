@@ -85,7 +85,40 @@
       </div>
     </section>
 
-    
+    <section class="bg-card rounded-2xl shadow-2xl p-6 md:p-10 mb-12 border border-slate-700/50">
+      <h2 class="text-3xl font-semibold text-primary mb-8 drop-shadow-md">Itens Adicionados</h2>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-700/50 bg-slate-900/50">
+        <table class="min-w-full divide-y divide-slate-700">
+          <thead class="bg-slate-800/80">
+            <tr>
+              <th class="px-6 py-5 text-left text-sm font-semibold text-slate-300 uppercase tracking-wider">Descrição</th>
+              <th class="px-6 py-5 text-left text-sm font-semibold text-slate-300 uppercase tracking-wider">Categoria</th>
+              <th class="px-6 py-5 text-right text-sm font-semibold text-slate-300 uppercase tracking-wider">Valor (R$)</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaItens" class="divide-y divide-slate-700">
+          </tbody>
+        </table>
+      </div>
+
+      <p id="mensagemVazia" class="text-center text-slate-500 mt-10 text-lg font-medium">
+        Nenhum item adicionado ainda.
+      </p>
+
+      <div class="mt-10 flex justify-end">
+        <button type="button" id="btnEnviar" 
+                class="bg-success hover:bg-successHover text-white font-bold py-4 px-16 rounded-xl transition shadow-2xl glow-accent">
+          Enviar para Backend
+        </button>
+      </div>
+    </section>
+
+    <section id="resultadoBackend" class="bg-card rounded-2xl shadow-2xl p-6 md:p-10 border border-slate-700/50 hidden">
+      <h2 class="text-3xl font-semibold text-primary mb-8 drop-shadow-md">Retorno do Backend</h2>
+      <pre id="conteudoResultado" class="p-6 rounded-xl text-sm overflow-auto max-h-96 border border-slate-600 bg-slate-900/70"></pre>
+    </section>
+
   </main>
 
   <script src="script.js"></script>
